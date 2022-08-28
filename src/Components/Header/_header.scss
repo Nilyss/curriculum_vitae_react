@@ -1,0 +1,81 @@
+@import 'src/Utils/sass/variables';
+@import 'src/Utils/sass/mixins';
+@import 'src/Utils/sass/keyframes';
+
+.header {
+  background: #f2f2f2;
+  padding: 2em;
+  box-shadow: $boxShadow;
+  border-radius: 0 0 17px 17px;
+}
+
+/* ********* LEFT CONTAINER ********* */
+
+.title__container__left {
+  display: flex;
+  gap: 2em;
+  align-items: center;
+}
+
+.title__container__left__fig {
+  overflow: hidden;
+  border-radius: 17px;
+}
+
+.title__container__left__fig__img {
+  width: 125px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 17px;
+  border: 2px solid $colorSecondary;
+  box-shadow:  $boxShadow;
+}
+
+.title__container__left__name__title {
+
+}
+
+.title__container__left__name__title__h1 {
+  background-image: $gradient;
+  background-clip: border-box;
+  background-size: 200% auto;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  animation: titleAnimation 2000ms linear infinite;
+}
+
+.title__container__left__name__title__subtitle {}
+
+/* ********* RIGHT CONTAINER ********* */
+
+.title__container__right {
+  display: flex;
+  flex-flow: column;
+  align-items: flex-end;
+  gap: 1em;
+}
+
+.title__container__right__title {}
+
+.title__container__right__address {}
+
+.title__container__right__phoneNumber {}
+
+.title__container__right__mailAddress {}
+
+.title__container__right__developmentEnvironment {
+  cursor: pointer;
+}
+
+/* ********* Development Environment Modal ********* */
+
+.devEnvModal {
+  display: flex;
+  flex-flow: column;
+  align-items: flex-end;
+  gap: .8em;
+  margin-top: 1em;
+  strong {
+    font-weight: bold;
+  }
+}
