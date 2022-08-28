@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/curriculum_vitae.iml" filepath="$PROJECT_DIR$/.idea/curriculum_vitae.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../curriculum_vitae_react/.idea/curriculum_vitae_react.iml" filepath="$PROJECT_DIR$/../curriculum_vitae_react/.idea/curriculum_vitae_react.iml" />
     </modules>
   </component>
 </project>
