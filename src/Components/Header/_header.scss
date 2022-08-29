@@ -3,17 +3,24 @@
 @import 'src/Utils/sass/keyframes';
 
 .header {
-  background: url('../../assets/images/greyAndCircleBG.webp') no-repeat bottom;
+  @media(max-width: $breakpointMobile) {
+    padding: .5em;
+  }
+  background: url('../../assets/images/greyAndCircleBG.webp') no-repeat 25% 10%;
   background-size: cover;
   padding: 2em;
   box-shadow: $boxShadowDark;
   border-radius: 0 0 17px 17px;
   display: flex;
+  flex-flow: wrap;
 }
 
 /* ********* LEFT CONTAINER ********* */
 
 .title__container__left {
+  @media(max-width: $breakpointTablet) {
+    width: 100%;
+  }
   display: flex;
   gap: 2em;
   align-items: center;
@@ -27,13 +34,11 @@
 
 .title__container__left__fig__img {
   width: 125px;
-  height: 150px;
+  height: 100px;
   object-fit: cover;
   border-radius: 17px;
   box-shadow:  $boxShadowLight;
 }
-
-.title__container__left__name__title {}
 
 .title__container__left__name__title__h1 {
   background-image: $gradient;
@@ -51,6 +56,10 @@
 /* ********* RIGHT CONTAINER ********* */
 
 .title__container__right {
+  @media(max-width: $breakpointTablet) {
+    width: 100%;
+    margin-top: 1em;
+  }
   width: 50%;
   display: flex;
   flex-flow: column;
@@ -59,16 +68,41 @@
   color: #f2f2f2;
 }
 
-.title__container__right__title {}
+.title__container__right__ul {
+  display: flex;
+  flex-flow: column;
+  align-items: flex-end;
+  width: 100%;
+  text-align: end;
+}
 
-.title__container__right__address {}
+.title__container__right__ul__li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+}
 
-.title__container__right__phoneNumber {}
-
-.title__container__right__mailAddress {}
-
-.title__container__right__developmentEnvironment {
+.liModal {
   cursor: pointer;
+  white-space: nowrap;
+}
+
+.homeLottie {
+  width: 8em;
+}
+
+.phoneLottie {
+  width: 3em;
+}
+
+.emailLottie {
+  width: 6em;
+}
+
+.devEnvLottie {
+  width: 8em;
 }
 
 /* ********* Development Environment Modal ********* */
@@ -81,6 +115,7 @@
   background: #f2f2f2;
   color: $colorSecondary;
   border-radius: 8px;
+  text-align: end;
   strong {
     font-weight: bold;
   }
@@ -100,6 +135,7 @@
 .devEnvModalTrue {
   opacity: 1;
   transition:  opacity 400ms 400ms ease-in-out, height 400ms ease-in-out;
+  box-shadow:  $boxShadowLight;
 }
 
 .devEnvModalFalse {

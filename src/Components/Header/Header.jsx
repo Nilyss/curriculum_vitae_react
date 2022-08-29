@@ -1,3 +1,10 @@
+// libraries
+import Lottie from 'lottie-react'
+import homeIcon from '../../Utils/lotties/home'
+import phoneIcon from '../../Utils/lotties/phone'
+import emailIcon from '../../Utils/lotties/email'
+import devEnv from '../../Utils/lotties/devEnv'
+
 // hooks
 import { useState, useEffect, useRef } from 'react'
 
@@ -49,21 +56,28 @@ export default function Header() {
           <h2 className="title__container__right__title articleTitle">
             Contact
           </h2>
-          <p className="title__container__right__address">
-            2 allée Olympe de Gouges, apt. 11, 17180 PERIGNY
-          </p>
-          <p className="title__container__right__phoneNumber">06 95 59 37 54</p>
-          <p className="title__container__right__mailAddress">
-            decressac.nicolas@gmail.com
-          </p>
-          <p
-            onClick={toggleModalState}
-            title="Afficher l'environnement de développement"
-            className="title__container__right__developmentEnvironment"
-          >
-            Environment de développement
-          </p>
-
+          <ul className="title__container__right__ul">
+            <li className="title__container__right__ul__li">
+              <Lottie animationData={homeIcon} className="homeLottie" />2 allée
+              Olympe de Gouges, apt. 11, 17180 PERIGNY
+            </li>
+            <li className="title__container__right__ul__li">
+              <Lottie animationData={phoneIcon} className="phoneLottie" />
+              06 95 59 37 54
+            </li>
+            <li className="title__container__right__ul__li">
+              <Lottie animationData={emailIcon} className="emailLottie" />
+              decressac.nicolas@gmail.com
+            </li>
+            <li
+              onClick={toggleModalState}
+              title="Afficher l'environnement de développement"
+              className="title__container__right__ul__li liModal"
+            >
+              <Lottie animationData={devEnv} className="devEnvLottie" />
+              Outil de développement
+            </li>
+          </ul>
           <div
             ref={refHeight}
             className={
