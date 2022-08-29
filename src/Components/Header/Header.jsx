@@ -34,76 +34,78 @@ export default function Header() {
 
   return (
     <>
-      <article className="header">
-        <div className="title__container__left">
-          <figure className="title__container__left__fig">
-            <img
-              className="title__container__left__fig__img"
-              src={profilePicture}
-              alt="Nicolas DECRESSAC"
-            />
-          </figure>
-          <div className="title__container__left__name__title">
-            <h1 className="title__container__left__name__title__h1">
-              Nicolas DECRESSAC
-            </h1>
-            <p className="title__container__left__name__title__subtitle">
-              Développeur web
-            </p>
+      <header>
+        <article className="header">
+          <div className="title__container__left">
+            <figure className="title__container__left__fig">
+              <img
+                className="title__container__left__fig__img"
+                src={profilePicture}
+                alt="Nicolas DECRESSAC"
+              />
+            </figure>
+            <div className="title__container__left__name__title">
+              <h1 className="title__container__left__name__title__h1">
+                Nicolas DECRESSAC
+              </h1>
+              <p className="title__container__left__name__title__subtitle">
+                Développeur web
+              </p>
+            </div>
           </div>
-        </div>
-        <div className="title__container__right">
-          <h2 className="title__container__right__title articleTitle">
-            Contact
-          </h2>
-          <ul className="title__container__right__ul">
-            <li className="title__container__right__ul__li">
-              <Lottie animationData={homeIcon} className="homeLottie" />2 allée
-              Olympe de Gouges, apt. 11, 17180 PERIGNY
-            </li>
-            <li className="title__container__right__ul__li">
-              <Lottie animationData={phoneIcon} className="phoneLottie" />
-              06 95 59 37 54
-            </li>
-            <li className="title__container__right__ul__li">
-              <Lottie animationData={emailIcon} className="emailLottie" />
-              decressac.nicolas@gmail.com
-            </li>
-            <li
-              onClick={toggleModalState}
-              title="Afficher l'environnement de développement"
-              className="title__container__right__ul__li liModal"
-            >
-              <Lottie animationData={devEnv} className="devEnvLottie" />
-              Outil de développement
-            </li>
-          </ul>
-          <div
-            ref={refHeight}
-            className={
-              devEnvModal
-                ? 'devEnvModal devEnvModalTrue'
-                : 'devEnvModal devEnvModalFalse'
-            }
-            style={{ height: devEnvModal ? `${heightEl}` : '0px' }}
-          >
-            <ul className=" devEnvModal__ul">
-              <li className="devEnvModal__ul__list">
-                <strong>IDE: </strong> IntelliJ IDEA - Ultimate
+          <div className="title__container__right">
+            <h2 className="title__container__right__title articleTitle">
+              Contact
+            </h2>
+            <ul className="title__container__right__ul">
+              <li className="title__container__right__ul__li">
+                <Lottie animationData={homeIcon} className="homeLottie" />2
+                allée Olympe de Gouges, apt. 11, 17180 PERIGNY
               </li>
-              <li className="devEnvModal__ul__list">
-                <strong>Système d'exploitation:</strong> macOS Monterey 12.5.1
+              <li className="title__container__right__ul__li">
+                <Lottie animationData={phoneIcon} className="phoneLottie" />
+                06 95 59 37 54
               </li>
-              <li className="devEnvModal__ul__list">
-                <strong>VM: </strong> Ubuntu 22.04 LTS & Windows 11 pro
+              <li className="title__container__right__ul__li">
+                <Lottie animationData={emailIcon} className="emailLottie" />
+                decressac.nicolas@gmail.com
               </li>
-              <li className="devEnvModal__ul__list">
-                <strong>Terminal:</strong> MacBook air m1
+              <li
+                onClick={toggleModalState}
+                title="Afficher l'environnement de développement"
+                className="title__container__right__ul__li liModal"
+              >
+                <Lottie animationData={devEnv} className="devEnvLottie" />
+                Outils de développement
               </li>
             </ul>
+            <div
+              ref={refHeight}
+              className={
+                devEnvModal
+                  ? 'devEnvModal devEnvModalTrue'
+                  : 'devEnvModal devEnvModalFalse'
+              }
+              style={{ height: devEnvModal ? `${heightEl}` : '0px' }}
+            >
+              <ul className=" devEnvModal__ul">
+                <li className="devEnvModal__ul__list">
+                  <strong>IDE: </strong> IntelliJ IDEA - Ultimate
+                </li>
+                <li className="devEnvModal__ul__list">
+                  <strong>Système d'exploitation:</strong> macOS Monterey 12.5.1
+                </li>
+                <li className="devEnvModal__ul__list">
+                  <strong>VM: </strong> Ubuntu 22.04 LTS & Windows 11 pro
+                </li>
+                <li className="devEnvModal__ul__list">
+                  <strong>Terminal:</strong> MacBook air m1
+                </li>
+              </ul>
+            </div>
           </div>
-        </div>
-      </article>
+        </article>
+      </header>
     </>
   )
 }

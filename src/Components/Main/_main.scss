@@ -1,0 +1,11 @@
+@import 'src/Utils/sass/variables';
+@import 'src/Utils/sass/mixins';
+@import 'src/Utils/sass/keyframes';
+
+.main {
+  display: flex;
+  flex-flow: wrap;
+  gap: 1.5em;
+  padding: 2em;
+  background: #f2f2f2;
+}

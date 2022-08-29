@@ -1,0 +1,35 @@
+@import 'src/Utils/sass/variables';
+@import 'src/Utils/sass/mixins';
+@import 'src/Utils/sass/keyframes';
+
+.card {
+  width: 49%;
+  background: url('../../assets/images/darkGreyBG.webp') no-repeat center;
+  background-size: cover;
+  border-radius: 18px;
+  border: 2px solid $colorSecondary;
+  padding: 2em;
+  box-shadow: $boxShadowDark;
+}
+
+.card__container {}
+
+.card__container__title {
+  text-align: center;
+  margin-bottom: 1em;
+  color: #f2f2f2;;
+  font-size: 1.8em;
+}
+
+.card__container__ul {
+  display: flex;
+  flex-flow: column;
+  gap: 1.5em;
+}
+
+.card__container__ul__li {
+  list-style: none;
+  color: #f2f2f2;;
+  line-height: 2em;
+  font-size: 1.2em;
+  }
