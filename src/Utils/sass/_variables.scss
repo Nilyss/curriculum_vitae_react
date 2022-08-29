@@ -9,5 +9,6 @@ $gradient: linear-gradient(
                 #fff800 100%
 );
 
-$boxShadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
-rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+$boxShadowLight: rgba(255, 255, 255, 0.63) 0px 2px 4px, rgba(255, 255, 255, 0.53) 0px 7px 13px -3px, rgb(255, 215, 215) 0px -3px 0px inset;
+
+$boxShadowDark: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;

@@ -1,17 +1,30 @@
 // hooks
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
 
 // style
 import './_header.scss'
 
 // images
-import profilePicture from '../../assets/images/pp_small.jpg'
+import profilePicture from '../../assets/images/pp_small.webp'
 
 export default function Header() {
   // init states
   const [devEnvModal, setDevEnvModal] = useState(false)
+  const [heightEl, setHeightEl] = useState()
 
-  // toggle development environment modal
+  // toggle states function
+  const toggleModalState = () => {
+    setDevEnvModal(!devEnvModal)
+  }
+
+  // get the  modal block to toggle
+  const refHeight = useRef()
+
+  // send to state the current height in pixels
+  useEffect(() => {
+    setHeightEl(`${refHeight.current.scrollHeight}px`)
+  }, [])
+
   return (
     <>
       <article className="header">
@@ -44,30 +57,37 @@ export default function Header() {
             decressac.nicolas@gmail.com
           </p>
           <p
-            onClick={() => {
-              setDevEnvModal(!devEnvModal)
-            }}
+            onClick={toggleModalState}
             title="Afficher l'environnement de développement"
             className="title__container__right__developmentEnvironment"
           >
             Environment de développement
           </p>
-          {devEnvModal && (
-            <div className="devEnvModal">
-              <p>
+
+          <div
+            ref={refHeight}
+            className={
+              devEnvModal
+                ? 'devEnvModal devEnvModalTrue'
+                : 'devEnvModal devEnvModalFalse'
+            }
+            style={{ height: devEnvModal ? `${heightEl}` : '0px' }}
+          >
+            <ul className=" devEnvModal__ul">
+              <li className="devEnvModal__ul__list">
                 <strong>IDE: </strong> IntelliJ IDEA - Ultimate
-              </p>
-              <p>
+              </li>
+              <li className="devEnvModal__ul__list">
                 <strong>Système d'exploitation:</strong> macOS Monterey 12.5.1
-              </p>
-              <p>
+              </li>
+              <li className="devEnvModal__ul__list">
                 <strong>VM: </strong> Ubuntu 22.04 LTS & Windows 11 pro
-              </p>
-              <p>
+              </li>
+              <li className="devEnvModal__ul__list">
                 <strong>Terminal:</strong> MacBook air m1
-              </p>
-            </div>
-          )}
+              </li>
+            </ul>
+          </div>
         </div>
       </article>
     </>

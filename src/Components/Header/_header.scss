@@ -3,10 +3,12 @@
 @import 'src/Utils/sass/keyframes';
 
 .header {
-  background: #f2f2f2;
+  background: url('../../assets/images/greyAndCircleBG.webp') no-repeat bottom;
+  background-size: cover;
   padding: 2em;
-  box-shadow: $boxShadow;
+  box-shadow: $boxShadowDark;
   border-radius: 0 0 17px 17px;
+  display: flex;
 }
 
 /* ********* LEFT CONTAINER ********* */
@@ -15,6 +17,7 @@
   display: flex;
   gap: 2em;
   align-items: center;
+  width: 50%;
 }
 
 .title__container__left__fig {
@@ -27,13 +30,10 @@
   height: 150px;
   object-fit: cover;
   border-radius: 17px;
-  border: 2px solid $colorSecondary;
-  box-shadow:  $boxShadow;
+  box-shadow:  $boxShadowLight;
 }
 
-.title__container__left__name__title {
-
-}
+.title__container__left__name__title {}
 
 .title__container__left__name__title__h1 {
   background-image: $gradient;
@@ -44,15 +44,19 @@
   animation: titleAnimation 2000ms linear infinite;
 }
 
-.title__container__left__name__title__subtitle {}
+.title__container__left__name__title__subtitle {
+  color: #f2f2f2;
+}
 
 /* ********* RIGHT CONTAINER ********* */
 
 .title__container__right {
+  width: 50%;
   display: flex;
   flex-flow: column;
   align-items: flex-end;
   gap: 1em;
+  color: #f2f2f2;
 }
 
 .title__container__right__title {}
@@ -73,9 +77,32 @@
   display: flex;
   flex-flow: column;
   align-items: flex-end;
-  gap: .8em;
   margin-top: 1em;
+  background: #f2f2f2;
+  color: $colorSecondary;
+  border-radius: 8px;
   strong {
     font-weight: bold;
   }
+}
+
+.devEnvModal__ul {
+  display: flex;
+  flex-flow: column;
+  align-items: flex-end;
+  padding: .5em;
+}
+
+.devEnvModal__ul__list {
+  list-style: none;
+}
+
+.devEnvModalTrue {
+  opacity: 1;
+  transition:  opacity 400ms 400ms ease-in-out, height 400ms ease-in-out;
+}
+
+.devEnvModalFalse {
+  opacity: 0;
+  transition: height 400ms ease-in-out, opacity 200ms 100ms ease-in-out;
 }
