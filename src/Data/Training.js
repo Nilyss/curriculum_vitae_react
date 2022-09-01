@@ -1,9 +1,14 @@
 export const training = {
-  fourthEntry:
-    'Mars 2022 - Septembre 2022 OpenClassrooms | Formation développeur web - obtention titre RNCP36076 ',
+  fourthEntryDate: 'Mars 2022 - Septembre 2022 OpenClassrooms ',
+  fourthEntry: ' Formation développeur web : obtention titre RNCP36076 ',
+  thirdEntryDate: '2006 - 2008 Lycée André Malraux ',
   thirdEntry:
-    '2006 - 2008 Lycée André Malraux | Baccalauréat metier des arts et des industries graphiques (Obtenu avec mention) ',
+    ' Baccalauréat metier des arts et des industries graphiques (Obtenu avec mention) ',
+  secondEntryDate: '2004 - 2006 Lycée André Malraux ',
   secondEntry:
-    '2004 - 2006 Lycée André Malraux | BEP Metiers de la communication et des industries graphiques. ',
+    ' BEP Metiers de la communication et des industries graphiques. ',
+  firstEntryDate: '',
   firstEntry: 'Anglais Niveau B1',
 }
+
+export default training

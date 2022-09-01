@@ -3,9 +3,17 @@
 @import 'src/Utils/sass/keyframes';
 
 .main {
+  @media(max-width: $breakpointMobile) {
+    gap: .5em;
+  }
+  @media(max-width: $breakpointTablet) {
+    gap: 1em;
+  }
   display: flex;
   flex-flow: wrap;
   gap: 1.5em;
   padding: 2em;
-  background: #f2f2f2;
+  justify-content: center;
+  background: url('../../assets/images/lightBG.webp') no-repeat ;
+  background-size: cover;
 }

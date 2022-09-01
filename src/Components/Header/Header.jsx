@@ -10,6 +10,7 @@ import { useState, useEffect, useRef } from 'react'
 
 // style
 import './_header.scss'
+import '../../Utils/sass/_global.scss'
 
 // images
 import profilePicture from '../../assets/images/pp_small.webp'

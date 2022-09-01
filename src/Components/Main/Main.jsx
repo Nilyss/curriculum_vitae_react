@@ -13,9 +13,9 @@ export default function Main() {
     <>
       <main className="main">
         <CardTraining />
+        <SoftSkillsCard />
         <ExperiencesCard />
         <HardSkillsCard />
-        <SoftSkillsCard />
         <InterestsCard />
       </main>
     </>

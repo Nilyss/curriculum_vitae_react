@@ -1,0 +1,35 @@
+@import 'src/Utils/sass/variables';
+@import 'src/Utils/sass/mixins';
+@import 'src/Utils/sass/keyframes';
+
+.articleTitle {
+  text-align: center;
+  margin-bottom: 1em;
+  color: #FFFFFF;
+  font-size: 1.8em;
+  &:after {
+    content: '';
+    display: flex;
+    margin:  .5em auto;
+    background: $colorPrimary;
+    width: 30%;
+    height: 0.5vh;
+    border-radius: 8px;
+  }
+}
+
+.articleSubtitle {
+  text-align: center;
+  margin-bottom: 1em;
+  color: #FFFFFF;
+  font-size: 1.3em;
+  &:after {
+    content: '';
+    display: flex;
+    margin:  .5em auto;
+    background: $colorPrimary;
+    width: 10%;
+    height: 0.5vh;
+    border-radius: 8px;
+  }
+}

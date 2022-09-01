@@ -33,8 +33,12 @@
 }
 
 .title__container__left__fig__img {
-  width: 125px;
-  height: 100px;
+  @media (max-width: $breakpointTablet) {
+    width: 125px;
+    height: 100px;
+  }
+  width: 150px;
+  height: 175px;
   object-fit: cover;
   border-radius: 17px;
   box-shadow:  $boxShadowLight;
@@ -68,7 +72,10 @@
   color: #f2f2f2;
 }
 
+.title__container__right__title {}
+
 .title__container__right__ul {
+  margin-top: -3em;
   display: flex;
   flex-flow: column;
   align-items: flex-end;
