@@ -2,7 +2,6 @@
 import Lottie from 'lottie-react'
 import homeIcon from '../../Utils/lotties/home'
 import phoneIcon from '../../Utils/lotties/phone'
-import emailIcon from '../../Utils/lotties/email'
 import devEnv from '../../Utils/lotties/devEnv'
 
 // hooks
@@ -66,10 +65,6 @@ export default function Header() {
               <li className="title__container__right__ul__li">
                 <Lottie animationData={phoneIcon} className="phoneLottie" />
                 06 95 59 37 54
-              </li>
-              <li className="title__container__right__ul__li">
-                <Lottie animationData={emailIcon} className="emailLottie" />
-                decressac.nicolas@gmail.com
               </li>
               <li
                 onClick={toggleModalState}

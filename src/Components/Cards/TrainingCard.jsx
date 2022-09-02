@@ -1,5 +1,5 @@
 // local Data
-import training from '../../Data/Training'
+import training from '../../Data/CardsData/Training'
 
 //  scss
 import './_card.scss'

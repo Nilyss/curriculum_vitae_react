@@ -2,7 +2,7 @@
 
 //  scss
 import './_card.scss'
-import interest from '../../Data/Interest'
+import interest from '../../Data/CardsData/Interest'
 
 export default function InterestsCard() {
   return (

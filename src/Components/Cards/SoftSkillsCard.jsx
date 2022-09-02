@@ -2,7 +2,7 @@
 
 //  scss
 import './_card.scss'
-import softSkills from '../../Data/SoftSkills'
+import softSkills from '../../Data/CardsData/SoftSkills'
 
 export default function SoftSkillsCard() {
   return (

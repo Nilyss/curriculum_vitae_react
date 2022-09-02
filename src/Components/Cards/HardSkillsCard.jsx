@@ -1,5 +1,5 @@
 // local Data
-import hardSkills from '../../Data/HardSkills'
+import hardSkills from '../../Data/CardsData/HardSkills'
 
 // logo
 import html from '../../assets/logos/html5.png'

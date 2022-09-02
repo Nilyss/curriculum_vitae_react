@@ -1,5 +1,5 @@
 // local Data
-import experiences from '../../Data/Experiences'
+import experiences from '../../Data/CardsData/Experiences'
 
 //  scss
 import './_card.scss'
