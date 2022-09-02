@@ -11,6 +11,9 @@ export default function SoftSkillsCard() {
         <div className="card__container">
           <h2 className="card__container__title articleTitle">Soft Skills</h2>
           <ul className="card__container__ul">
+            <li className="card__container__ul__li">
+              {softSkills.seventhEntry}
+            </li>
             <li className="card__container__ul__li">{softSkills.fifthEntry}</li>
             <li className="card__container__ul__li">
               {softSkills.fourthEntry}
