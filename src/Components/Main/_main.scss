@@ -1,0 +1,19 @@
+@import 'src/Utils/sass/variables';
+@import 'src/Utils/sass/mixins';
+@import 'src/Utils/sass/keyframes';
+
+.main {
+  @media(max-width: $breakpointMobile) {
+    gap: .5em;
+  }
+  @media(max-width: $breakpointTablet) {
+    gap: 1em;
+  }
+  display: flex;
+  flex-flow: wrap;
+  gap: 6em;
+  padding: 2em 0 4em 0;
+  justify-content: center;
+  background: url('../../assets/images/lightbg.webp') no-repeat ;
+  background-size: cover;
+}

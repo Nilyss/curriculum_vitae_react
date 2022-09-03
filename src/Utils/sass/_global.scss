@@ -1,0 +1,68 @@
+@import 'src/Utils/sass/variables';
+@import 'src/Utils/sass/mixins';
+@import 'src/Utils/sass/keyframes';
+
+.articleTitle {
+  text-align: center;
+  margin-bottom: 1em;
+  color: #FFFFFF;
+  font-size: 1.8em;
+  &:after {
+    content: '';
+    display: flex;
+    margin:  .5em auto;
+    background: $colorPrimary;
+    width: 30%;
+    height: 0.5vh;
+    border-radius: 8px;
+  }
+}
+
+.articleSubtitle {
+  text-align: center;
+  margin-bottom: 1em;
+  color: #FFFFFF;
+  font-size: 1.3em;
+  &:after {
+    content: '';
+    display: flex;
+    margin:  .5em auto;
+    background: $colorPrimary;
+    width: 10%;
+    height: 0.5vh;
+    border-radius: 8px;
+  }
+}
+
+// ********** toggle modal **********
+
+.articleTitle--modalFalse {
+  color: #FFFFFF;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  transform: rotate(180deg);
+  &:after {
+    content: '';
+    display: flex;
+    background: $colorPrimary;
+    width: .5vh;
+    height: 100%;
+    border-radius: 8px;
+  }
+}
+
+//*********** Training card Modal **********
+
+.cardFalse {
+  background: url('../../assets/images/darkGreyBG.webp') no-repeat;
+  background-size: cover;
+  cursor: pointer;
+  transition: width 400ms ease-out;
+  height: 30em;
+}
+
+.cardTrue {
+  cursor: pointer;
+  transition:  width 1000ms ease-out;
+  background: #2f2f2f;
+}

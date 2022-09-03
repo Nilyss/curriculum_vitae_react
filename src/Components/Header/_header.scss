@@ -1,0 +1,152 @@
+@import 'src/Utils/sass/variables';
+@import 'src/Utils/sass/mixins';
+@import 'src/Utils/sass/keyframes';
+
+.header {
+  @media (max-width: $breakpointMobile) {
+    padding: 0.5em;
+  }
+  background: url('../../assets/images/greyAndCircleBG.webp') no-repeat 25% 10%;
+  background-size: cover;
+  padding: 2em;
+  box-shadow: $boxShadowDark;
+  border-radius: 0 0 17px 17px;
+  display: flex;
+  flex-flow: wrap;
+}
+
+/* ********* LEFT CONTAINER ********* */
+
+.title__container__left {
+  @media (max-width: $breakpointTablet) {
+    width: 100%;
+  }
+  display: flex;
+  gap: 2em;
+  align-items: center;
+  width: 50%;
+}
+
+.title__container__left__fig {
+  overflow: hidden;
+  border-radius: 18px;
+}
+
+.title__container__left__fig__img {
+  @media (max-width: $breakpointTablet) {
+    width: 125px;
+    height: 100px;
+  }
+  width: 150px;
+  height: 175px;
+  object-fit: cover;
+  border-radius: 17px;
+  box-shadow: $boxShadowLight;
+}
+
+.title__container__left__name__title__h1 {
+  background-image: $gradient;
+  background-clip: border-box;
+  background-size: 200% auto;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  animation: titleAnimation 2000ms linear infinite;
+}
+
+.title__container__left__name__title__subtitle {
+  color: #f2f2f2;
+}
+
+/* ********* RIGHT CONTAINER ********* */
+
+.title__container__right {
+  @media (max-width: $breakpointTablet) {
+    width: 100%;
+    margin-top: 1em;
+  }
+  width: 50%;
+  display: flex;
+  flex-flow: column;
+  align-items: flex-end;
+  gap: 1em;
+  color: #f2f2f2;
+}
+
+.title__container__right__title {
+}
+
+.title__container__right__ul {
+  margin-top: -3em;
+  display: flex;
+  flex-flow: column;
+  align-items: flex-end;
+  width: 100%;
+  text-align: end;
+}
+
+.title__container__right__ul__li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.liModal {
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.homeLottie {
+  width: 8em;
+}
+
+.phoneLottie {
+  width: 3em;
+}
+
+.emailLottie {
+  width: 6em;
+}
+
+.devEnvLottie {
+  width: 8em;
+}
+
+/* ********* Development Environment Modal ********* */
+
+.devEnvModal {
+  display: flex;
+  flex-flow: column;
+  align-items: flex-end;
+  margin-top: 1em;
+  background: #f2f2f2;
+  color: $colorSecondary;
+  border-radius: 8px;
+  text-align: end;
+  strong {
+    font-weight: bold;
+  }
+}
+
+.devEnvModal__ul {
+  display: flex;
+  flex-flow: column;
+  align-items: flex-end;
+  padding: 0.5em;
+}
+
+.devEnvModal__ul__list {
+  list-style: none;
+}
+
+.devEnvModalTrue {
+  opacity: 1;
+  transition: opacity 400ms 400ms ease-in-out, height 400ms ease-in-out;
+  box-shadow: $boxShadowLight;
+}
+
+.devEnvModalFalse {
+  opacity: 0;
+  transition: height 400ms ease-in-out, opacity 200ms 100ms ease-in-out;
+}

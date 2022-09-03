@@ -1,0 +1,78 @@
+@import 'src/Utils/sass/variables';
+@import 'src/Utils/sass/mixins';
+@import 'src/Utils/sass/keyframes';
+
+.card {
+  @media (max-width: $breakpointTablet) {
+    margin: auto;
+    width: 100%;
+  }
+  border-radius: 18px;
+  border: 2px solid $colorSecondary;
+  padding: 4em;
+  box-shadow: $boxShadowDark;
+}
+
+.articleSubtitle {
+  margin-top: 1.5em;
+}
+
+.card__container__ul {
+  display: flex;
+  flex-flow: column;
+  gap: 1.5em;
+  opacity: 0;
+  animation: cardsContentOpacity 1200ms  forwards;
+}
+
+.card__container__ul__container {
+  display: flex;
+  flex-flow: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 4em;
+}
+
+.card__container__ul__li {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  list-style: none;
+  color: #f2f2f2;
+  line-height: 2em;
+  font-size: 1.2em;
+  & strong {
+    font-weight: 700;
+    color: #ffffff;
+  }
+}
+
+.card__container__ul__li--alt {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  list-style: none;
+  color: #f2f2f2;
+  line-height: 2em;
+  font-size: 1.2em;
+  text-align: center;
+  & strong {
+    font-weight: 700;
+    color: #ffffff;
+  }
+}
+
+.card__container__ul__li__fig {
+  object-fit: cover;
+  width: 100%;
+}
+
+.card__container__ul__li__fig__logo {
+  width: 150px;
+}
+
+.card__container__ul__li__fig__logo--alt {
+  width: 270px;
+  background: #f2f2f2;
+  border-radius: 8px;
+}
