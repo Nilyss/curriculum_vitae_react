@@ -11,4 +11,5 @@ react-router-dom@6.3.0
 sass@1.54.5
 styled-components@5.3.5
 lottie-react@2.3.1
+@emailjs/browser@3.7.0
 ```
