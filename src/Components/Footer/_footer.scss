@@ -8,7 +8,7 @@
   flex-flow: column;
   align-items: center;
   justify-content: center;
-  gap: .5em;
+  gap: 0.5em;
   background: url('../../assets/images/greyAndCircleBG.webp') no-repeat center;
   background-size: cover;
   overflow: hidden;
@@ -29,11 +29,11 @@
 }
 
 .footer__title__nav__ul {
-  @media(max-width: $breakpointMobile) {
+  @media (max-width: $breakpointMobile) {
     flex-flow: column;
     align-items: center;
   }
-  @media(max-width: $breakpointTablet) {
+  @media (max-width: $breakpointTablet) {
     gap: 10em;
   }
   display: flex;
@@ -43,18 +43,22 @@
 }
 
 .footer__title__nav__ul__li {
-  list-style:  none;
   color: #f2f2f2;
+  list-style: none;
   cursor: pointer;
+  a {
+    color: #f2f2f2;
+    text-decoration: none;
+  }
 }
 
 /* ********* Contact Modal ********* */
 
 .formContainer__form {
-  @media(max-width: $breakpointMobile) {
+  @media (max-width: $breakpointMobile) {
     gap: unset;
   }
-  @media(max-width: $breakpointTablet) {
+  @media (max-width: $breakpointTablet) {
     width: 60%;
   }
   display: flex;
@@ -63,11 +67,16 @@
   margin: auto;
   align-items: center;
   justify-content: center;
-  gap: .5em;
+  gap: 0.5em;
   border: 2px solid $colorPrimary;
   border-radius: 8px;
   padding: 2em;
-  background: linear-gradient(194deg, rgba(131,61,178,1) 0%, rgba(204,36,130,1) 30%, rgba(255,19,97,1) 100%);
+  background: linear-gradient(
+    194deg,
+    rgba(131, 61, 178, 1) 0%,
+    rgba(204, 36, 130, 1) 30%,
+    rgba(255, 19, 97, 1) 100%
+  );
 }
 
 .formContainer__form__label {
@@ -80,7 +89,7 @@
   width: 100%;
   text-align: center;
   border-radius: 4px;
-  padding: .2em;
+  padding: 0.2em;
   font-size: 1.1em;
   margin-bottom: 1em;
   border: 2px solid $colorSecondary;
@@ -96,14 +105,14 @@
   display: flex;
   align-items: center;
   background-image: radial-gradient(
-                  100% 100% at 100% 0,
-                  #ffd7d7 0,
-                  $colorPrimary 100%
+    100% 100% at 100% 0,
+    #ffd7d7 0,
+    $colorPrimary 100%
   );
   border: none;
   border-radius: 6px;
   box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,
-  rgba(45, 35, 66, 0.3) 0 7px 13px -3px, rgba(58, 65, 111, 0.5) 0 -3px 0 inset;
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, rgba(58, 65, 111, 0.5) 0 -3px 0 inset;
   color: $colorSecondary;
   transition: box-shadow 0.15s, transform 0.15s;
   height: 2em;
@@ -112,12 +121,12 @@
 
   &:focus {
     box-shadow: $colorPrimary 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px,
-    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, $colorPrimary 0 -3px 0 inset;
+      rgba(45, 35, 66, 0.3) 0 7px 13px -3px, $colorPrimary 0 -3px 0 inset;
   }
 
   &:hover {
     box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px,
-    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, $colorPrimary 0 -3px 0 inset;
+      rgba(45, 35, 66, 0.3) 0 7px 13px -3px, $colorPrimary 0 -3px 0 inset;
     transform: translateY(-2px);
   }
 
@@ -126,12 +135,12 @@
     transform: translateY(2px);
   }
 }
-  .formContainerTrue {
-    opacity: 1;
-    transition:  opacity 400ms 400ms ease-in-out, height 400ms ease-in-out;
-  }
+.formContainerTrue {
+  opacity: 1;
+  transition: opacity 400ms 400ms ease-in-out, height 400ms ease-in-out;
+}
 
-  .formContainerFalse {
-    opacity: 0;
-    transition: height 400ms ease-in-out, opacity 200ms 100ms ease-in-out;
-  }
+.formContainerFalse {
+  opacity: 0;
+  transition: height 400ms ease-in-out, opacity 200ms 100ms ease-in-out;
+}

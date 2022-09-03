@@ -3,16 +3,13 @@
 @import 'src/Utils/sass/keyframes';
 
 .card {
-  @media(max-width: $breakpointTablet) {
+  @media (max-width: $breakpointTablet) {
     margin: auto;
     width: 100%;
   }
-  width: 48%;
-  background: url('../../assets/images/darkGreyBG.webp') no-repeat center;
-  background-size: cover;
   border-radius: 18px;
   border: 2px solid $colorSecondary;
-  padding: 2em;
+  padding: 4em;
   box-shadow: $boxShadowDark;
 }
 
@@ -24,6 +21,8 @@
   display: flex;
   flex-flow: column;
   gap: 1.5em;
+  opacity: 0;
+  animation: cardsContentOpacity 1200ms  forwards;
 }
 
 .card__container__ul__container {
@@ -39,27 +38,27 @@
   flex-flow: column;
   justify-content: center;
   list-style: none;
-  color: #f2f2f2;;
+  color: #f2f2f2;
   line-height: 2em;
   font-size: 1.2em;
   & strong {
     font-weight: 700;
-    color: #FFFFFF;
+    color: #ffffff;
   }
-  }
+}
 
 .card__container__ul__li--alt {
   display: flex;
   flex-flow: column;
   justify-content: center;
   list-style: none;
-  color: #f2f2f2;;
+  color: #f2f2f2;
   line-height: 2em;
   font-size: 1.2em;
   text-align: center;
   & strong {
     font-weight: 700;
-    color: #FFFFFF;
+    color: #ffffff;
   }
 }
 
@@ -69,7 +68,7 @@
 }
 
 .card__container__ul__li__fig__logo {
-  width:  150px;
+  width: 150px;
 }
 
 .card__container__ul__li__fig__logo--alt {

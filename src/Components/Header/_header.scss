@@ -3,8 +3,8 @@
 @import 'src/Utils/sass/keyframes';
 
 .header {
-  @media(max-width: $breakpointMobile) {
-    padding: .5em;
+  @media (max-width: $breakpointMobile) {
+    padding: 0.5em;
   }
   background: url('../../assets/images/greyAndCircleBG.webp') no-repeat 25% 10%;
   background-size: cover;
@@ -18,7 +18,7 @@
 /* ********* LEFT CONTAINER ********* */
 
 .title__container__left {
-  @media(max-width: $breakpointTablet) {
+  @media (max-width: $breakpointTablet) {
     width: 100%;
   }
   display: flex;
@@ -41,7 +41,7 @@
   height: 175px;
   object-fit: cover;
   border-radius: 17px;
-  box-shadow:  $boxShadowLight;
+  box-shadow: $boxShadowLight;
 }
 
 .title__container__left__name__title__h1 {
@@ -60,7 +60,7 @@
 /* ********* RIGHT CONTAINER ********* */
 
 .title__container__right {
-  @media(max-width: $breakpointTablet) {
+  @media (max-width: $breakpointTablet) {
     width: 100%;
     margin-top: 1em;
   }
@@ -72,7 +72,8 @@
   color: #f2f2f2;
 }
 
-.title__container__right__title {}
+.title__container__right__title {
+}
 
 .title__container__right__ul {
   margin-top: -3em;
@@ -132,7 +133,7 @@
   display: flex;
   flex-flow: column;
   align-items: flex-end;
-  padding: .5em;
+  padding: 0.5em;
 }
 
 .devEnvModal__ul__list {
@@ -141,8 +142,8 @@
 
 .devEnvModalTrue {
   opacity: 1;
-  transition:  opacity 400ms 400ms ease-in-out, height 400ms ease-in-out;
-  box-shadow:  $boxShadowLight;
+  transition: opacity 400ms 400ms ease-in-out, height 400ms ease-in-out;
+  box-shadow: $boxShadowLight;
 }
 
 .devEnvModalFalse {
